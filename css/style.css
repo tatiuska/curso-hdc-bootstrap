@@ -113,12 +113,13 @@ header, .navbar {
 
 .main-title::after {
     content: "";
+    display: block; /* não tinha esse parâmetro no CSS do curso, uma vez que o utilizei, passei a visualizar a linha, ainda que em lugar errado da página */
     border-top: 2px solid #333;
-    width: 15%;
+    width: 10%;
     position: absolute;
-    top: 60px;
-    left: 42.5%;
-}
+    left: 45%;
+    margin-top: 12px; /* adicionei um valor de margin-top para dar espaço entre o H3 e a linha */
+} /* retirei o parâmetro top, que estava mostrando uma única linha, quase no topo da página. depois que fiz isso, passou a aparecer uma linha abaixo de cada H3 */
 
 .about-title {
     font-size: 17px;
@@ -139,4 +140,29 @@ header, .navbar {
 #about-list i {
     color: #65DAF9;
     margin-right: 15px;
+}
+
+/* Seviços */
+.service-box {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.service-box i, .service-box h4 {
+    transition: .5s;
+}
+
+.service-box i {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.service-box h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.service-box:hover > i, .service-box:hover > h4 {
+    color: #65DAF9;
 }
